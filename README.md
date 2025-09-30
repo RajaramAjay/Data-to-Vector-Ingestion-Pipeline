@@ -62,6 +62,6 @@ The Data-to-Vector Ingestion Pipeline is an enterprise-grade solution designed t
 - Flask, Sentence Transformers, FAISS, and other dependencies (see `requirements.txt`).
 
 ## Next Steps
-After ingesting data into the FAISS vector database using this pipeline, you can perform semantic search and generate AI-driven responses with the [AI Search Pipeline](https://github.com/YourUsername/YourRepoName). The AI Search Pipeline uses the FAISS index created here to retrieve relevant documents and produce context-aware answers via an LLM.
+After ingesting data into the FAISS vector database using this pipeline, you can perform semantic search and generate AI-driven responses with the [AI Search Pipeline](https://github.com/YourUsername/YourRepoName](https://github.com/RajaramAjay/AI-Search-Pipeline). The AI Search Pipeline uses the FAISS index created here to retrieve relevant documents and produce context-aware answers via an LLM.
 
 Usage: Configure the AI Search Pipeline to point to the FAISS index (database/faiss) and query it via its Flask API or front-end UI.
