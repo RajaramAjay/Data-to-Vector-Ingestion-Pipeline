@@ -1,0 +1,27 @@
+pypdf
+langchain
+chromadb # Vector storage
+pytest
+boto3
+langchain-community
+sentence-transformers
+langchain-huggingface
+langchain-chroma
+Flask==3.0.3
+Flask_Cors==5.0.0
+wfastcgi
+toml
+pymupdf 
+frontend
+pdf2image
+beautifulsoup4
+faiss-cpu
+rank_bm25
+langgraph
+evaluate==0.4.0
+nltk==3.8.1
+rouge-score==0.1.2
+jsonschema==4.21.0
+ollama
+# azure
+azure-cognitiveservices-vision-computervision

@@ -1,0 +1,6 @@
+models/sentence_tranformer_model
+.env
+database/faiss
+database/faiss_0812
+database/faiss_backup_b8bdc324
+tests

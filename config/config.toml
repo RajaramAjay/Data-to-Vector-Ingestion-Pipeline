@@ -1,0 +1,27 @@
+[faiss]
+path ="./database/faiss_test"
+
+[chunking]
+chunk_size = 800
+chunk_overlap = 80
+
+[webscraper]
+max_links = 100
+timeout = 10
+
+[embeddings]
+model_path = "./models/sentence_tranformer_model"
+
+[flask]
+host = "0.0.0.0"
+port = 5007
+
+[files]
+csv_path = "pdfs_with_images.csv"
+skip_image_pdfs = true
+
+[logging]
+log_dir = "logs"
+log_level = "INFO"
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
