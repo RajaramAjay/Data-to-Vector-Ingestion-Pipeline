@@ -1,23 +1,24 @@
 # Data-to-Vector Ingestion Pipeline
 
 ## Overview
-Data-to-Vector Ingestion Pipeline is a robust, enterprise-grade solution for building vector databases from diverse data sources, including documents (e.g., PDFs) and webpages. It enables efficient semantic search and retrieval through a streamlined pipeline featuring OCR, document chunking, web scraping, embedding generation with Sentence Transformers, and FAISS vector storage.
+The Data-to-Vector Ingestion Pipeline is an enterprise-grade solution designed to empower businesses to build scalable vector databases from diverse data sources, including documents (PDFs, DOCX, TXT, CSV) and webpages. By transforming raw data into semantic embeddings stored in a FAISS vector database, it enables efficient, AI-driven semantic search and retrieval. The pipeline supports document chunking, deduplication, web scraping, and planned OCR integration for scanned PDFs, with robust error handling, logging, and performance optimization. Deployed as a Flask-based web application with a user-friendly front-end, it is ready for enterprise environments, including IIS deployment.
 
 ## Key Features
-- **Document and Web Ingestion**: Process PDFs, scanned documents, and webpages seamlessly.
-- **Embedding Generation**: Create semantic embeddings using Sentence Transformers (e.g., all-MiniLM-L6-v2).
-- **Vector Storage**: Store and query embeddings efficiently with FAISS.
-- **Pipeline Orchestration**: Automate data ingestion, processing, and storage.
-- **Web Scraping**: Extract and process text from webpages for semantic search.
-- **OCR Support**: Planned support for extracting text from scanned PDFs using Azure OCR.
-- **Image Detection**: Identify image-heavy PDFs for optimized processing.
-- **Input Validation**: Ensure robust validation for files and URLs.
-- **Logging**: Centralized logging for monitoring and debugging.
+- **Multi-Source Data Ingestion**: Seamlessly process documents (PDFs, DOCX, TXT, CSV) and webpages into a unified vector database.
+- **Semantic Embeddings**: Generate high-quality embeddings using Sentence Transformers (e.g., all-MiniLM-L6-v2) with GPU acceleration support.
+- **FAISS Vector Storage**: Store and query embeddings efficiently with FAISS, supporting incremental updates and deduplication.
+- **Document Chunking & Deduplication**: Split documents into semantically coherent chunks with SHA-256 hashing to eliminate duplicates.
+- **Web Scraping**: Extract and process webpage content with configurable crawling limits and robust HTML parsing.
+- **Planned OCR Integration**: Framework for Azure OCR to extract text from scanned PDFs (currently commented out for cost/privacy).
+- **Robust Error Handling**: Comprehensive logging and error recovery for reliable operation in enterprise settings.
+- **IIS Deployment**: Configuration support for deployment on Internet Information Services (IIS) via web.config.
+- **Performance Optimization**: Multiprocessing for file loading and GPU-accelerated embedding generation for large-scale datasets.
 
 ## Use Cases
-- Enterprise search systems for internal documents and web content.
-- Knowledge management platforms requiring semantic retrieval.
-- Data aggregation for AI-driven applications and analytics.
+- **Enterprise Search**: Enable semantic search across internal documents and external web content for knowledge management.
+- **Data Analytics**: Aggregate and index diverse data sources for AI-driven insights and decision-making.
+- **Content Management**: Build intelligent repositories for documents and web data with fast, meaning-based retrieval.
+- **AI Application Development**: Provide a foundation for RAG (Retrieval-Augmented Generation) systems and other AI workflows.
 
 ## Installation
 1. Clone the repository:
@@ -54,13 +55,8 @@ Data-to-Vector Ingestion Pipeline is a robust, enterprise-grade solution for bui
 - `models/sentence_transformers/`: Pre-trained Sentence Transformer models.
 - `logs/`: Log files for debugging.
 - `logger_setup.py`: Centralized logging configuration.
+- `web.config`: IIS deployment configuration for Windows server environments.
 
 ## Requirements
 - Python 3.8+
 - Flask, Sentence Transformers, FAISS, and other dependencies (see `requirements.txt`).
-
-## Contributing
-Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request. See `CONTRIBUTING.md` (to be added) for guidelines.
-
-## License
-MIT License
